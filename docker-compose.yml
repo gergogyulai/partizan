@@ -1,0 +1,16 @@
+services:
+  partizan:
+    build: .
+    container_name: partizan
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env
+    volumes:
+      - partizan-data:/data
+      # To use YouTube cookies, mount the file and set YTDLP_COOKIES=/cookies.txt in .env:
+      # - ./cookies.txt:/cookies.txt:ro
+
+volumes:
+  partizan-data:

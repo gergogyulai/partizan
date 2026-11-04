@@ -1,0 +1,3 @@
+aiohttp>=3.10
+# "default" pulls in the YouTube JS challenge solver, "deno" the JS runtime it needs.
+yt-dlp[default,deno]>=2026.10.26
